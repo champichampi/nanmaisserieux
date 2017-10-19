@@ -1,0 +1,698 @@
+/*
+Theme Name: millenium_2017
+Author: Thomas
+Description: Thème pour le site millenium
+Version: 1.0
+*/
+
+
+@charset "UTF-8";
+/* ======================================
+	         CSS de Base
+====================================== */
+
+html { /* corriger la méthode de taille des boîtes */
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+img { /* adapter la taille des images : max = largeur parent */
+	max-width: 100%;
+	height: auto;
+}
+
+/* -------- MES CLASSES UTILITAIRES -------- */
+/* 1. Lignes et Colonnes */
+.ligne {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+.col {
+	display: table-cell;
+}
+
+.float-gauche {
+	float: left;
+	margin: 0em 1em 0.5em 0em;
+}
+
+.float-droite {
+	float: right;
+	margin: 0em 0em 0.5em 1em;
+}
+
+
+/*---------- PRINT -------------*/
+
+.print-only {
+	display: none;
+}
+
+
+
+/*--------- CACHER UN ELEMENT---------*/
+
+.cacher-info {
+	overflow: hidden;
+	height: 0px;
+	width: 0px;
+	position: absolute;
+}
+
+
+
+
+
+/* ======================================
+	         CSS pour ce site 
+====================================== */
+
+html {
+	font-size: 16px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+body {
+	margin: 0;
+	padding: 0;
+    background-color: #D6DEE3;
+    padding: 100px 150px;
+}
+ul {
+	padding: 0;
+    margin: 0;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+
+
+
+
+
+			/* =========== HEADER =========== */
+
+h1 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+
+			
+			/* =========== NAV =========== */
+header ul {
+        background-color: #282A2A;
+    }
+        header ul a {
+            color: white;
+        }
+
+header ul li:hover,
+header ul li:focus {
+    background-color: #181A1A;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+    
+
+          /*== nav haut ==*/
+nav ul.nav-haut {            
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+    nav ul.nav-haut li {
+        /*flex-grow: 1;*/
+        border: 1px solid #0A0A0B;
+        
+    }
+        nav ul.nav-haut li a {
+            display: block;
+            /*height: 48px;*/
+            line-height: 2.9rem;
+            text-align: center;
+            
+        }
+.nav-haut-item {
+    width: 130px;
+}
+    .burger a {width: 48px;}
+    .recherche {flex-grow: 1;}
+    .connexion {align-self: flex-end}
+
+nav li form {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 13px 30px
+}
+nav li label {
+    color: white;
+}
+nav li input {
+    margin-right: 0.5rem;
+}
+nav li form button {
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+
+.connexion {background-color: #0391C0}
+.store a {background-color: #154F63;}
+
+
+         /*== nav gauche ==*/
+
+.nav-gauche {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+    .nav-gauche li {
+       
+    }
+        .nav-gauche a {
+            display: block;
+            width: 51px;
+            height: 48px;
+            line-height: 2.9rem;
+            text-align: center;
+            /*background-image: url( ../img/nav-gauche.png);*/
+            /*text-indent: -9000px;*/
+            border: 1px solid #181A1A;
+            text-align: left;
+            padding-left: 5px;
+			overflow: hidden;
+        }
+            /*.nav-gauche a.lol {background-position-y: -50px;}
+            .nav-gauche a.hs {background-position-y: -100px;}
+            .nav-gauche a.wow {background-position-y: -150px;}*/
+
+			/* =========== MAIN =========== */
+
+body .lecteur {
+	margin-bottom: 1.5rem;
+	padding: 0rem 2rem 1rem 2rem;
+}
+
+.contenu {
+    background-color: white;
+    max-width: 1000px;
+    min-width: 900px;
+    padding: 0;
+    margin: 0 auto;
+	border: 1px solid #BFC6CB;
+}
+
+
+
+p.ouvrir-lecteur {
+	margin: 0;
+	padding: 0 2rem;
+	display: flex;
+	justify-content: flex-end;
+}
+
+p.fermer-lecteur {
+	margin: 0;
+	padding:0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+p.ouvrir-lecteur a,
+p.fermer-lecteur a{
+	color: #808689;
+	font-size: 0.9rem;
+	text-align: right;
+}
+
+p.accueil {
+    background-color: #F1F4F5;
+    border-top: 1px solid #BFC6CB;
+    border-bottom: 1px solid #D6DEE3;
+    padding: 1rem 2rem;
+    color: #899092;
+    font-size: 0.8rem;
+	margin: 0 0 2rem 0;
+}
+
+p.accueil strong {
+    color: #899092;
+}
+
+.main-aside {
+    display: flex;
+    margin: 0 auto;
+}
+
+
+            /*=== main ===*/
+main {
+    flex-grow: 1;
+    padding: 0rem 2rem 1rem 1px;
+}
+main .article-h2 {
+    color: white;
+    background-color: #5A4A91;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    padding: 0.7rem 1rem;
+    display: inline-block;
+}
+main .span-h2 {
+    background-color: #C0CED6;
+}
+
+main .article-h2 h2 {
+    font-weight: lighter;
+    font-size: 1.2rem;
+    margin: 0;    
+}
+
+.article {
+    border-left: 4px solid #5A4A91;
+	margin-top: 3rem;
+}
+
+.article:first-child {
+	margin-top: 0;
+}
+
+.article:last-child {
+	margin-bottom: 3rem;
+}
+
+
+.article-contenu {
+    padding: 1.5rem 0 1.5rem 2rem;
+}
+.article-contenu a p {
+    color: black;
+}
+
+.article-contenu p.date-et-heure {
+	color: #8897A5;
+}
+
+.contour-img {
+	border: 1px solid #D6DEE3;
+	padding: 1px;
+}
+.contour-img:hover,
+.contour-img:focus {
+	border: 1px solid #0098cb;
+}
+
+h3 {
+	color: black;
+}
+
+
+.tout-sur {
+	display: flex;
+	justify-content: flex-end;
+	background-image: url(../img/fond-span.png);
+}
+.tout-sur a {
+	padding: 0.5em 1em;
+	background-color: #5A4A91;
+	color: white;
+	font-size: 0.8rem;
+	border-radius: 2px;
+}
+
+
+            /*=== aside ===*/
+
+aside {
+    width: 50%;
+    border-left: 1px solid #D6DEE3;
+    padding: 1rem 2rem;
+}
+aside h2 {
+    background-image: url(../img/fond-span.png);
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+aside h2 span {
+	background-color: white;
+	padding-right: 1rem;
+}
+aside .titre-flash-info {
+    color: white;
+    background-color: #282A2B;
+    text-transform: uppercase;
+    padding: 0.7rem 0.9rem;
+    margin-top: 0;
+	display: block;
+}
+
+.aside-article-margin {
+	margin-top: 3rem;
+}
+
+aside ul {
+	font-size: 0.8rem;
+}
+	aside li a {
+		display: block;
+	}
+
+.aside-actu li {
+	border-bottom: 1px solid #D6DEE3;
+	padding: 0.5rem 0;
+}
+.aside-actu > p {
+	display: flex;
+	justify-content: flex-end;
+}
+.aside-actu > p a {
+	color: black;
+	font-size: 0.9rem;
+}
+
+
+a span.heure {
+	background-color: #2995B0;
+	color: white;
+	padding: 0.2em 0.4em;
+}
+
+a span.jeu {
+	color: #2995B0;
+	text-transform: uppercase;
+}
+
+a span.titre-news {
+	font-size: 1rem;
+}
+
+
+
+.aside-decouverte p {
+	margin: 0;
+}
+.aside-decouverte a span.rubrique {
+	color: #5FA8CF;
+	font-size: 1.2rem;
+}
+.aside-decouverte a span.sujet {
+	font-size: 1rem;
+}
+.aside-decouverte li {
+	margin-top: 1rem;
+}
+
+
+
+			/* =========== FOOTER ============ */
+
+
+footer {
+    background-color: #A5A8AB;
+	padding: 1rem 2rem;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer ul {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	font-size: 2rem;
+}
+
+footer li {
+	margin-left: 0.5rem;
+}
+
+footer li:last-child {
+	font-size: 0.8rem;
+}
+footer li:last-child a {
+	vertical-align: middle;
+}
+
+footer a {
+	color: white;
+}
+
+footer > a {
+	font-size: 2rem;
+}
+
+
+
+
+
+			/* =========== STREAMING ============ */
+
+
+.stream {
+	display: flex;
+	flex-wrap: nowrap;
+	border: 1px solid #444041;
+}
+
+.liste-stream {
+	width: 50%;
+	background-color: #131414;
+	display: flex;
+	flex-direction: column;
+}
+
+.stream ul {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+	.stream li {
+		background-color: #282A2B;
+		border: 1px solid #111212;
+		flex-grow: 1;
+	}
+
+
+		.liste-stream li a {
+			color: white;
+			display: block;
+			height: 100%;
+		}
+
+.liste-stream span {
+	display: inline-block;
+	height: 100%;
+	width: 25%;
+}
+
+span.liste-stream-texte {padding: 0.5rem 1rem;}
+span.liste-stream-icon {padding: 0.5rem 1rem; background-color: #1B1D1D;}
+
+.liste-stream > a {
+	color: #818587;
+	margin: 0.5rem 1rem;
+	font-size: 0.8rem;
+}
+.liste-stream > a:hover,
+.liste-stream > a:focus 
+{
+	color: white;
+}
+
+
+
+
+
+
+
+@media (max-width:1200px) {
+	
+	body {
+		padding: 100px 50px;
+	}
+	
+/* =========== HEADER =========== */
+
+	
+/* =========== NAV =========== */
+	
+
+/* =========== MAIN =========== */
+
+
+/* =========== FOOTER ============ */
+
+}
+
+@media (max-width: 1100px) {
+	
+	body {
+		padding: 50px 0 50px 50px;
+	}
+	
+/* =========== HEADER =========== */
+
+
+/* =========== NAV =========== */
+	
+	
+/* =========== MAIN =========== */
+
+
+/* =========== FOOTER ============ */
+
+}
+
+@media (max-width: 950px) {
+	
+	
+/* =========== HEADER =========== */
+	
+	
+/* =========== NAV =========== */
+
+
+/* =========== MAIN =========== */
+	
+	.contenu {
+		min-width: auto;
+	}
+	
+	
+	.stream {
+		flex-direction: column;
+	}
+	
+	.stream-video,
+	.liste-stream {
+		width: 100%;
+	}
+	
+	
+
+/* =========== FOOTER ============ */
+
+}
+
+@media (max-width: 750px) {
+	
+/* =========== HEADER =========== */
+	
+	
+/* =========== NAV =========== */
+
+
+
+/* =========== MAIN =========== */
+	
+	.main-aside {
+		flex-direction: column;
+	}
+
+	main,
+	aside {
+		width: 100%;
+	}
+
+/* =========== FOOTER ============ */
+
+}
+@media (max-width:) {
+	
+/* =========== HEADER =========== */
+	
+	
+/* =========== NAV =========== */
+
+
+/* =========== MAIN =========== */
+
+
+/* =========== FOOTER ============ */
+
+}
+@media (max-width:) {
+	
+/* =========== HEADER =========== */
+	
+	
+/* =========== NAV =========== */
+
+
+/* =========== MAIN =========== */
+
+
+/* =========== FOOTER ============ */
+
+}
+@media (max-width:) {
+	
+/* =========== HEADER =========== */
+	
+	
+/* =========== NAV =========== */
+
+
+/* =========== MAIN =========== */
+
+
+/* =========== FOOTER ============ */
+
+}
+
+
+
+
+
+
+/* ===================
+		PRINT 
+==================== */
+
+
+@media print {
+	
+* {
+	background-color: transparent !important;
+	width: auto !important;
+}
+
+html {
+	font-size: 18px;
+}
+
+.print-only {
+	display: block;
+}
+
+.print-no {
+	display: none;
+}
+
+nav {
+	display: none;
+}
+
+#footer {
+	border-top: 1px solid black;
+}
+	
+}
+
+
